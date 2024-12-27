@@ -1,5 +1,4 @@
 from behave import given, when, then
-from selenium import webdriver
 from pages.login_page import LoginPage
 
 
@@ -20,6 +19,6 @@ def test_step_impl(context, email, password):
 
 @then('the user should be logged in successfully')
 def test_step_impl(context):
-    # Add assertions to verify the login, such as checking if the user is redirected to the dashboard
+    # Add assertions to verify the login, such as checking if the page title
     assert "My Account" in context.driver.title
     context.driver.quit()

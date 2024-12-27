@@ -20,6 +20,6 @@ def test_step_impl(context, email, password):
 
 @then('the user should get valid error message')
 def test_step_impl(context):
-    # Add assertions to verify the login, such as checking if the user is redirected to the dashboard
+    # Add assertions to verify the error message
     assert context.login_page.error_message_visible()
     context.driver.quit()

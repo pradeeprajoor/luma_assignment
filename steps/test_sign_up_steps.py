@@ -25,7 +25,6 @@ def test_step_impl(context, first_name, last_name, email, password, confirm_pass
 
 @then('the user should be registered successfully')
 def test_step_impl(context):
-    # Verify that the registration was successful, e.g., by checking the page title or URL
-    print("*******************************************"+ context.driver.title)
+    # Verify that the registration was successful, e.g., by checking the page title
     assert "My Account" in context.driver.title
     context.driver.quit()
